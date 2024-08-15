@@ -15,9 +15,9 @@ const routes = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       { index: true, element: <Home /> },
-      { path: "home", element: <Home /> },
-      { path: "view", element: <View /> },
-      { path: "show", element: <Show /> },
+      { path: "/home", element: <Home /> },
+      { path: "/view", element: <View /> },
+      { path: "/show", element: <Show /> },
     ],
   },
 ]);

@@ -4,6 +4,7 @@ import user1 from '../../image/user.png';
 import snow1 from '../../image/d8wxke_2_.png';
 import auto from '../../image/Frame.png';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Show() {
     const [cars, setCars] = useState([]);
@@ -52,7 +53,7 @@ export default function Show() {
         <>
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb py-5 ms-5">
-                    <li className="breadcrumb-item"><a href="home">Home</a></li>
+                    <li className="breadcrumb-item"><Link to="/home">Home</Link></li>
                     <li className="breadcrumb-item active" aria-current="page">Cars</li>
                 </ol>
             </nav>
@@ -78,7 +79,7 @@ export default function Show() {
             </div>
             <div className="container">
                 <div className="row">
-                    {records.filter((car)=>{
+                    {records.filter((car) => {
                         return search.toLowerCase() === '' ? car : car.make.toLowerCase().includes(search)
                     }).map((car) => (
                         <div className="col-md-3 py-5" key={car.id}>
@@ -113,7 +114,7 @@ export default function Show() {
                                         </div>
                                     </div>
                                     <div className='py-2 text-center'>
-                                        <a href="view" className="btn btn-primary">View details <i className="bi bi-arrow-right"></i></a>
+                                        <Link className="btn btn-primary" to="/view">View details <i className="bi bi-arrow-right"></i></Link>
                                     </div>
                                 </div>
                             </div>

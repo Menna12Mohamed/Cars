@@ -23,6 +23,7 @@ import ios from '../../image/ios.png'
 import andriod from '../../image/andriod.png'
 import footer from '../../image/Footer.png'
 import axios from 'axios';
+import { Link } from 'react-router-dom'
 export default function Home() {
   const [cars, setCars] = useState([]);
   let getCars = async () => {
@@ -145,8 +146,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className='py-2 text-center'>
-                    <a href="view" class="btn btn-primary ">View details <i class="bi bi-arrow-right"></i></a>
-
+                  <Link className="btn btn-primary" to="/view">View details <i className="bi bi-arrow-right"></i></Link>
                   </div>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export default function Home() {
         </div>
       </div>
       <div className='text-center'>
-        <a href="show" class="btn btn-outline-secondary px-5">Show all vehicles <i className="fa-solid fa-right-long m-2"></i></a>
+        <Link class="btn btn-outline-secondary px-5" to="/show">Show all vehicles <i className="fa-solid fa-right-long m-2"></i></Link>
       </div>
       {/* end api */}
 

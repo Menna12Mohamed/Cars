@@ -5,6 +5,7 @@ import user1 from '../../image/user.png'
 import snow1 from '../../image/d8wxke_2_.png'
 import auto from '../../image/Frame.png'
 import doors from '../../image/doors.png'
+import { Link } from 'react-router-dom'
 
 
 export default function View() {
@@ -12,8 +13,8 @@ export default function View() {
         <>
             <nav aria-label="breadcrumb ">
                 <ol className="breadcrumb py-5 ms-5">
-                    <li className="breadcrumb-item"><a href="home">Home</a></li>
-                    <li className="breadcrumb-item"><a href="show">Cars</a></li>
+                    <li className="breadcrumb-item"><Link to="/home">Home</Link></li>
+                    <li className="breadcrumb-item"><Link to='/show'>Cars</Link></li>
                     <li className="breadcrumb-item active" aria-current="page">Car details</li>
                     <li className="breadcrumb-item active" aria-current="page">Chevrolet Equinox</li>
                 </ol>
